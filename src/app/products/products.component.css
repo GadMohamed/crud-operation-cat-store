@@ -1,0 +1,16 @@
+
+*
+{
+    transition:all .3s;
+}
+
+.cat-img
+{
+    width: 200px;
+    height: 200px;
+}
+
+tr:hover
+{
+    cursor: pointer;
+}

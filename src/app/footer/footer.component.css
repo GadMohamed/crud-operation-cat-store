@@ -1,0 +1,60 @@
+#footer {
+    position: fixed;
+    width: 60%;
+    bottom: 0%;
+    left: 20%;
+    text-align: center;
+    padding: 4px;
+    padding-bottom: 0px;
+    border-radius: 0% 0% 0 0;
+    background-color: rgba(17, 17, 17, 0.993) !important;
+    border: solid 1px white;
+    color: wheat
+}
+
+#footer p {
+    color: wheat;
+    font-size: 20px
+}
+
+#footerContent p span {
+    cursor: pointer;
+    transition: all .3s;
+    font-weight: bold
+}
+
+#footerContent p span:hover {
+    color: sandybrown
+}
+
+#socialMedia a {
+    color: wheat;
+    font-size: 20px;
+    margin: 15px;
+    text-decoration: none;
+    transition: all .3s
+}
+
+#socialMedia #facbook:hover {
+    color: #3b5998;
+}
+
+#socialMedia #twitter:hover {
+    color: #1da1f2;
+}
+
+#socialMedia #instgram:hover {
+    color: #e1306c;
+}
+
+#socialMedia #youtube:hover {
+    color: #ff0000;
+}
+
+#socialMedia #whatsApp:hover {
+    color: green
+}
+
+#socialMedia #linkedIn:hover {
+    color: #0077B5;
+}

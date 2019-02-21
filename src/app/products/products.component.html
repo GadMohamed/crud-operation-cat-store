@@ -1,0 +1,151 @@
+
+<section class="cats pt-5 mt-5" >
+
+<div class="container">
+
+<!-- <div class="product ">
+
+<div class="row">
+
+<div class="col-md-3">
+
+  <div class="cat-img">
+    <img class="img-fluid" src="../../assets/background-images/2.jpeg" alt="">
+  </div>
+
+</div>
+
+<div class="col-md-6">
+
+    <div class="cat-details">
+      <div class="title text-center">
+        <p>cat</p>
+      </div>
+
+    </div> 
+  
+</div>
+
+<div class="col-md-3">
+
+    <div class="edit-delete text-center d-flex flex-column">
+        <a href="#" class=" edit py-3 px-5">Edit</a>
+        <a href="#" class=" delete py-3 px-5">Delete</a>
+      </div>
+  
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>   -->
+
+
+<table class="table table-hover">
+
+<thead>
+
+  <th>image</th>
+  <th>special</th>
+  <th>info</th>
+  <th>price</th>
+  <th>Edit & Delete</th>
+
+</thead>
+
+<tbody>
+
+  <tr (click)="test()" *ngFor="let cat of list" >
+    <td><img class="cat-img" [src]="cat.catImage"/></td>
+    <td>{{cat.catSpecial}}</td>
+    <td>
+      {{cat.catInfo}}
+    </td>
+    <td>{{cat.catPrice}}</td>
+    <td>
+      <div class="edit-delete text-center d-flex flex-column">
+        <a href="#" class=" edit py-1 ">Edit</a>
+        <a href="#" class=" delete py-1 ">Delete</a>
+      </div>
+    </td>
+     
+  </tr>
+
+  
+
+</tbody>
+
+
+</table>
+
+
+
+</div>
+
+</section>
+
+<section class="py-5">
+
+    <div class="container">
+  
+      <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)"  class="text-center border border-light p-5">
+  
+          <p class="h4 mb-4">Add Cat</p>
+  
+          
+          <!-- Cat ID -->
+          <input type="text" [(ngModel)]="service.formData.catId"  name="catId" required #catId="ngModel" ngModel pattern="[\d]{0,3}"  class="form-control mt-4" placeholder="catID " >
+          <div class="alert alert-danger" *ngIf="catId.touched && !catId.valid" >
+            <div *ngIf="catId.errors.required">catId is requied </div>
+            <div *ngIf="catId.errors.pattern">catId Should Be Number </div>
+          </div>
+            
+      
+          <!-- Cat Special -->
+          <input type="text" [(ngModel)]="service.formData.catSpecial" required #catSpecial="ngModel" ngModel name="catSpecial"  minlength="3" max length="100" pattern="[A-Za-z ]{3,100}"  class="form-control mt-4" placeholder="Cat Special">
+          <div class="alert alert-danger" *ngIf="catSpecial.touched && !catSpecial.valid" >
+            <div *ngIf="catSpecial.errors.required">Special is requied </div>
+            <div *ngIf="catSpecial.errors.pattern">Special dosenot match pattern </div>
+          </div>
+
+      
+          <!-- cat Info -->
+          <input type="text" [(ngModel)]="service.formData.catInfo" required #catInfo="ngModel" ngModel   name="catInfo" minlength="3" max length="100" pattern="[A-Za-z]{3,100}"  class="form-control mt-4" placeholder="information" >
+          <div class="alert alert-danger" *ngIf="catInfo.touched && !catInfo.valid" >
+              <div *ngIf="catInfo.errors.required">catInfo Name is requied </div>
+              <div *ngIf="catInfo.errors.pattern">catInfo Name dosenot match pattern </div>
+          </div>
+  
+          <!-- Cat Price -->
+          <input type="text" [(ngModel)]="service.formData.catPrice"  name="catPrice" required #catPrice="ngModel" ngModel pattern="[\d]{2,3}"  class="form-control mt-4" placeholder="Cat price " >
+          <div class="alert alert-danger" *ngIf="catPrice.touched && !catPrice.valid" >
+            <div *ngIf="catPrice.errors.required">catPrice is requied </div>
+            <div *ngIf="catPrice.errors.pattern">catPrice Should Be Number </div>
+          </div>
+  
+          <!-- Image -->
+
+          <input type="file" [(ngModel)]="service.formData.catImage" name="catImage" class="form-control mt-4" placeholder="Image " accept="image/*" >
+          
+           <div class="buttons-save">
+            
+          <button type="submit"  [disabled]="form.invalid"  class="btn btn-info my-4 btn-block py-2 px-5">Save</button>
+           </div>
+          
+         
+    </form>    
+      
+      
+  
+  
+  </div>
+  
+  
+  
+  </section>
+  

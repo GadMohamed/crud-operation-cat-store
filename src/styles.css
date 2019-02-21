@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+.edit ,.delete
+{
+    text-decoration: none;
+    color:white;
+    font-size: 1.2rem;
+    margin-top: 6px;
+    border-radius: 6x;
+}
+
+ .edit
+{
+   background-color: #1a4ee0;
+   
+}
+ .delete
+{
+   background-color: rgb(241, 52, 52);
+}
+
+.edit:hover
+{
+    background-color: #0336c0;
+    color: white;
+    text-decoration: none;
+}
+.delete:hover
+{
+    background-color:rgb(245, 1, 1);
+    color: white;
+    text-decoration: none;
+}
+
